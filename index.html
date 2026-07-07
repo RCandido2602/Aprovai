@@ -923,52 +923,7 @@ async function runSQL(){
 ['le','lp'].forEach(id=>{const e=$(id);if(e)e.addEventListener('keydown',ev=>{if(ev.key==='Enter')doLogin();});});
 </script>
 
-<div id="cors-warning" style="display:none;position:fixed;inset:0;background:rgba(26,42,56,.97);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px">
-  <div style="background:#fff;border-radius:16px;padding:32px;max-width:500px;width:100%;box-shadow:0 8px 32px rgba(0,0,0,.3)">
-    <div style="font-size:36px;text-align:center;margin-bottom:16px">⚠️</div>
-    <h2 style="font-size:18px;font-weight:700;color:#1A2A38;text-align:center;margin-bottom:8px">Como abrir o app corretamente</h2>
-    <p style="font-size:13px;color:#5A6B7B;text-align:center;margin-bottom:20px;line-height:1.6">
-      O app não pode ser aberto diretamente como arquivo (<code style="background:#f4f6f9;padding:1px 5px;border-radius:4px">file://</code>). Escolha uma das opções abaixo:
-    </p>
-    <div style="display:flex;flex-direction:column;gap:10px">
-      <div style="background:#E6F5FC;border-radius:10px;padding:14px;border-left:4px solid #0898D0">
-        <div style="font-size:13px;font-weight:700;color:#0670A0;margin-bottom:6px">🟢 Opção 1 — Mais fácil (VS Code)</div>
-        <div style="font-size:12px;color:#1A2A38;line-height:1.6">
-          1. Abra o VS Code<br>
-          2. Instale a extensão <strong>Live Server</strong><br>
-          3. Clique com botão direito no arquivo HTML → <strong>"Open with Live Server"</strong>
-        </div>
-      </div>
-      <div style="background:#E2F7F4;border-radius:10px;padding:14px;border-left:4px solid #1BBBA1">
-        <div style="font-size:13px;font-weight:700;color:#0F8A78;margin-bottom:6px">🟢 Opção 2 — Linha de comando</div>
-        <div style="font-size:12px;color:#1A2A38;line-height:1.6">
-          Abra o terminal na pasta do arquivo e rode:<br>
-          <code style="background:#1A2A38;color:#1BBBA1;padding:6px 10px;border-radius:6px;display:block;margin-top:6px;font-size:12px">python3 -m http.server 3000</code>
-          Depois acesse: <strong>http://localhost:3000</strong>
-        </div>
-      </div>
-      <div style="background:#F5F3FF;border-radius:10px;padding:14px;border-left:4px solid #7C3AED">
-        <div style="font-size:13px;font-weight:700;color:#4C1D95;margin-bottom:6px">🟢 Opção 3 — Windows (sem instalar nada)</div>
-        <div style="font-size:12px;color:#1A2A38;line-height:1.6">
-          1. Coloque o arquivo numa pasta<br>
-          2. Abra o Prompt de Comando nessa pasta<br>
-          3. Digite: <code style="background:#1A2A38;color:#CBA6F7;padding:3px 7px;border-radius:4px">python -m http.server 3000</code><br>
-          4. Acesse: <strong>http://localhost:3000/SetFree_App_REAL_v5.html</strong>
-        </div>
-      </div>
-    </div>
-    <p style="font-size:11px;color:#9BAAB8;text-align:center;margin-top:16px">Esta mensagem aparece somente quando o arquivo é aberto direto pelo navegador.</p>
-  </div>
-</div>
 
-<script>
-// Detectar se está rodando via file:// e mostrar aviso
-(function() {
-  if (window.location.protocol === 'file:') {
-    document.getElementById('cors-warning').style.display = 'flex';
-  }
-})();
-</script>
 
 </body>
 </html>
